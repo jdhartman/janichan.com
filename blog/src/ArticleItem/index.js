@@ -1,6 +1,6 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import Article from '../Article';
+import { Link } from 'react-router-dom';
+import { withFirebase } from '../Firebase';
 
 class ArticleItem extends React.Component {
   constructor(props) {
@@ -34,4 +34,4 @@ class ArticleItem extends React.Component {
   }
 }
 
-export {ArticleItem};
+export default withFirebase(ArticleItem);

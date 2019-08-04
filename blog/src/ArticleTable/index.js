@@ -1,5 +1,6 @@
 import React from 'react';
-import {ArticleItem} from '../ArticleItem';
+import ArticleItem from '../ArticleItem';
+import {withFirebase} from '../Firebase';
 
 class ArticleTable extends React.Component {
   constructor(props) {
@@ -47,4 +48,4 @@ class ArticleTable extends React.Component {
   }
 }
 
-export default ArticleTable;
+export default withFirebase(ArticleTable);

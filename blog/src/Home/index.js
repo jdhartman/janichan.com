@@ -18,12 +18,10 @@ constructor(props) {
 }
 
   render() {
-
-    const ArticleTableForm = withFirebase(ArticleTable);
     return (
       <div>
         <Profile />
-        <ArticleTableForm />
+        <ArticleTable />
       </div>
     );
   }

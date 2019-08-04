@@ -1,0 +1,40 @@
+{
+  "name": "electron-with-create-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "electron": "^1.4.14",
+    "electron-builder": "^21.2.0",
+    "electron-is-dev": "^1.1.0",
+    "foreman": "^3.0.1",
+    "react-scripts": "^3.0.1",
+    "wait-on": "^3.3.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "showdown": "^1.9.0"
+  },
+  "main": "src/electron-starter.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron electron-starter.js",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron electron-starter.js\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
